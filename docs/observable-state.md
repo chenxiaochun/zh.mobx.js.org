@@ -139,11 +139,13 @@ Inference rules:
 
 ## `observable`
 
-Usage:
+使用方式：
 
 -   `observable(source, overrides?, options?)`
 
-The `observable` annotation can also be called as a function to make an entire object observable at once.
+就像调用一个普通函数一样，`observable`可以将一个完整对象立刻变成响应式状态。传入的`source`对象会被复制，并且所有的成员都会变成响应式的。此特性类似于`makeAutoObservable`函数功能。
+
+相应的，也可以在`overrides`
 The `source` object will be cloned and all members will be made observable, similar to how it would be done by `makeAutoObservable`.
 Likewise, an `overrides` map can be provided to specify the annotations of specific members.
 Check out the above code block for an example.
